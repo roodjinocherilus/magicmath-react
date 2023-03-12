@@ -1,8 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Calculator from './Calculator.js';
-import Home from './Home.js';
-import Quote from './Quote.js';
+import {
+  BrowserRouter as Router, Routes, Route, Link,
+} from 'react-router-dom';
+import Calculator from './Calculator';
+import Home from './Home';
+import Quote from './Quote';
 import './App.css';
 
 function App() {
@@ -23,17 +25,11 @@ function App() {
           </ul>
         </nav>
 
-        <Switch>
-          <Route path="/calculator">
-            <Calculator />
-          </Route>
-          <Route path="/quote">
-            <Quote />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/calculator" element={<Calculator />} />
+          <Route path="/quote" element={<Quote />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
       </div>
     </Router>
   );

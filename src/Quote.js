@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Quote = () => {
-  const [text, setText] = useState("");
-  const [author, setAuthor] = useState("");
+  const [text, setText] = useState('');
+  const [author, setAuthor] = useState('');
 
   const handleQuoteChange = (event) => {
     setText(event.target.value);
@@ -14,9 +14,9 @@ const Quote = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(`"${text}" - ${author}`);
-    setText("");
-    setAuthor("");
+    // console.log(`"${text}" - ${author}`);
+    setText('');
+    setAuthor('');
   };
 
   return (
@@ -24,20 +24,20 @@ const Quote = () => {
       <h1>Get a Quote</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="text">Quote Text:</label>
+          <label htmlFor="quote-text">Quote Text:</label>
           <input
             type="text"
-            id="text"
+            id="quote-text"
             value={text}
             onChange={handleQuoteChange}
             required
           />
         </div>
         <div>
-          <label htmlFor="author">Quote Author:</label>
+          <label htmlFor="quote-author">Quote Author:</label>
           <input
             type="text"
-            id="author"
+            id="quote-author"
             value={author}
             onChange={handleAuthorChange}
             required
