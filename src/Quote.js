@@ -24,24 +24,28 @@ const Quote = () => {
       <h1>Get a Quote</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="quote-text">Quote Text:</label>
-          <input
-            type="text"
-            id="quote-text"
-            value={text}
-            onChange={handleQuoteChange}
-            required
-          />
+          <label htmlFor="quote-text">
+            Quote Text:
+            <input
+              type="text"
+              id="quote-text"
+              value={text}
+              onChange={handleQuoteChange}
+              required
+            />
+          </label>
         </div>
         <div>
-          <label htmlFor="quote-author">Quote Author:</label>
-          <input
-            type="text"
-            id="quote-author"
-            value={author}
-            onChange={handleAuthorChange}
-            required
-          />
+          <label htmlFor="quote-author">
+            Quote Author:
+            <input
+              type="text"
+              id="quote-author"
+              value={author}
+              onChange={handleAuthorChange}
+              required
+            />
+          </label>
         </div>
         <button type="submit">Submit</button>
       </form>
